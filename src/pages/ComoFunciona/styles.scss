@@ -1,0 +1,99 @@
+@import '../../styles/base.scss';
+
+.containerComoFunciona{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 800px;
+
+    .contentComoFunciona{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        max-width: 967px;
+        padding: 80px 0;
+
+        .headerComoFunciona{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            h1{
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 28px;
+                font-weight: $light;
+                padding-top: 20px;
+                margin: 0;
+            }
+
+            p{
+                font-size: 18px;
+                font-weight: $regular;
+                max-width: 825px;
+                text-align: center;
+                margin: 30px 30px;
+            }
+
+            .image{
+                margin-bottom: 60px;
+            }
+        }
+        .containerVideo{
+            max-width: 967px;
+            width: 90vw;
+            max-height: 544px;
+            height: 50vw;
+
+            .iFrame{
+                margin: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .containerComoFunciona{
+        .contentComoFunciona{
+            .headerCComoFunciona{
+                margin-top: 35px;
+                h1{
+                }
+                p{
+                }
+                .image{
+                }
+            }
+            .iFrame{
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 414px){
+    .containerComoFunciona{
+        min-height: calc(100vh - 250px);
+        .contentComoFunciona{
+            .headerComoFunciona{
+                h1{
+                    font-size: 30px;
+                }
+                p{
+                    font-size: 16px;
+                }
+                .image{
+                    height: 45px;
+                    margin-bottom: 45px;
+                }
+            }
+            .iFrame{
+            }
+        }
+    }
+}

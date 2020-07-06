@@ -1,0 +1,92 @@
+@import '../../../styles/base.scss';
+
+.containerTimeline{
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 60px 0;
+    justify-content: center;
+    align-items: center;
+
+    .contentTimeline{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        .containerState{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 150px;
+            margin-right: 10px;
+
+            .done{
+                background-image: url('../../../assets/icons/check.png');
+            }
+
+            .disable{
+                background-image: url('../../../assets/icons/3-inativo.png');
+            }
+
+            .current{
+                background-image: url('../../../assets/icons/2-foco.png');
+            }
+
+            .stateContent{
+                display: block;
+                height: 35px;
+                width: 35px;
+                text-align: center;
+                border-radius: 50%;
+                border: 0;
+                
+            }
+
+            .stateContent2{
+                display: block;
+                height: 35px;
+                width: 35px;
+                text-align: center;
+                border-radius: 50%;
+                border: 0;
+            }
+
+            .stateContent3{
+                display: block;
+                height: 35px;
+                width: 35px;
+                border-radius: 50%;
+                border: 0;
+                
+            }
+            .stateContent4{
+                display: block;
+                height: 35px;
+                width: 35px;
+                border-radius: 50%;
+                border: 0;
+                background-image: url('../../../assets/icons/4-inativo.png');
+            }
+
+            .paragrafy{
+                text-align: center;
+                margin-top: 15px;
+            }
+        }
+
+        .containerState:last-child{
+            margin-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1025px){
+    .containerTimeline {
+        // margin-bottom: -20%;
+        .contentTimeline {
+            margin-top: 70px;
+        }
+    }
+}

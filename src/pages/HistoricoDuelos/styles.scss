@@ -1,0 +1,45 @@
+@import "../../styles/base.scss";
+
+.containerHistorico {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+  position: relative;
+  padding: 50px 0;
+  min-height: 600px;
+
+  .titleHistorico {
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    font-weight: $light;
+    color: $Black;
+    margin: 25px 0 50px 0;
+    text-transform: uppercase;
+  }
+
+  .containerSelects {
+    margin-bottom: 35px;
+  }
+  .descriptionDuels {
+    max-width: 470px;
+    text-align: center;
+    margin: 0 auto 75px;
+  }
+}
+
+@media screen and (min-height: 1024px) {
+  .containerHistorico {
+    min-height: calc(100vh - 390px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .containerHistorico {
+    min-height: calc(100vh - 390px);
+    top: 80px;
+    .titleHistorico {
+    }
+  }
+}

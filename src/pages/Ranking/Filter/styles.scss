@@ -1,0 +1,35 @@
+@import '../../../styles/base.scss';
+
+.containerFilter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+
+    .containerSelects{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .containerSelect{
+            margin: 0 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 426px){
+    .containerFilter{
+        flex-direction: column;
+        .btnFilter{
+            width: 310px;
+        }
+
+        .containerSelects{
+            flex-direction: column;
+            .containerSelect{
+                margin: 0 5px 15px 0;
+            }
+        }
+    }
+}

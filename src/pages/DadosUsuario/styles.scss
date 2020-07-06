@@ -1,0 +1,155 @@
+@import '../../styles/base.scss';
+
+.telaCompleteCadastro {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .completeCadastro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: none;
+
+        .titleH3 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .dadosPessoais {
+            display: flex;
+            flex-direction: column;
+            width: 450px;
+            min-height: 600px;
+
+            .titleH3 {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            
+            .error {
+                display: flex;
+                justify-content: center;
+            }
+
+            fieldset {
+                border: none;
+                position: relative;
+                width: 450px;
+                padding: 0;
+                margin: 0 0 15px 0;
+            
+                .label {
+                    position: absolute;
+                    top: 50%;
+                    left: 15px;
+                    margin-top: -10px;
+                    color: $Grey3;
+                }
+        
+                input:focus + .label, input:valid + .label {
+                    color: $Black;
+                    top: 10%;
+                    margin-top: 0;
+                    font-size: 12px;
+                    font-weight: $semiBold;
+                }
+        
+                input:valid + .label {
+                    color: #000;
+                }
+                       
+                input[type="text"], input[type="date"] {
+                    display: block;
+                    background-color: $White;
+                    box-shadow: 1px 1px 6px 0px rgba(193,193,193,1);
+                    width: calc(450px - 15px);
+                    padding: 20px 0 5px 15px;
+                    border: 0;
+                    outline:none;
+                }
+
+                input[type="date"] {
+                    padding: 15px 0 5px 15px;
+                    color: transparent;
+                }
+               
+                input[type="date"]:focus, input[type="date"]:valid {
+                    color: #000;
+                }
+                
+            }
+                .doisCampos {
+                    display: flex;
+                    justify-content: space-around;
+
+                    #nascimento {
+                        max-width: 175px;
+                        margin-right: 15px;
+                    }
+                    #cpf {
+                        max-width: 230px;
+                    }            
+                }
+          
+            .continuar {
+                padding: 11px 66px;
+                margin: 30px 0 80px 0;
+                background: $Grey2;
+                text-align: center;
+                font-size: 14px;
+                font-weight: $semiBold;
+                color: $White; 
+                text-transform: uppercase;
+                border: 0;
+            }
+        }                
+    }        
+}
+
+@media screen and (max-width: 440px) {
+    .telaCompleteCadastro {
+        .completeCadastro {
+            .dadosPessoais {
+                max-width: 280px;
+                fieldset {
+                    max-width: 280px;
+                    input {
+                        max-width: (280px - 15px);
+                    }
+                }
+                .doisCampos {
+                    flex-wrap: wrap;
+                    fieldset {
+                        max-width: 280px;
+                        input {
+                            max-width: (280px - 15px);
+                        }
+                        #nascimento, #numero {
+                            max-width: 265px;
+                            margin: 0;
+                        }
+                        #cpf {
+                            max-width: 265px;
+                        }
+
+                        .newCadastro{
+                            .containerCadastro{
+                                fieldset{
+
+                                }
+                            }
+                        }
+                    }
+                }                
+            }
+        }    
+    }
+}
+
+@media screen and (min-height: 1179px) {
+    .telaCompleteCadastro {
+        height: 100vh;
+    }
+}

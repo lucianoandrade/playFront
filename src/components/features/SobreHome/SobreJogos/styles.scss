@@ -1,0 +1,40 @@
+@import '../../../../styles/base.scss';
+
+.jogos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    min-height: 630px;
+    padding: 0 10%;
+
+    .jogos-titulo {
+        // max-width: 687px;
+        font-family: 'Open Sans';
+        font-weight: $light;
+        font-size:30px;
+        margin-bottom: 2em;
+        margin-top: 3em;
+    }
+
+    .jogos-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+        max-width: 840px;
+        img {
+            width: 270px;
+            height: 170px;
+            margin: 5px;
+
+            @media screen and (min-width: 1025px){
+                height: 210px; 
+                width: 390px;
+                margin: 15px;    
+            }
+        }
+    }
+}

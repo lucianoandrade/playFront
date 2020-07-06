@@ -1,0 +1,94 @@
+@import '../../../../../styles/base.scss';
+
+.menuMobile{
+  display: none
+}
+
+@media screen and (max-width: 1024px) {
+  .menuMobile {
+    display: flex;
+    flex-direction: column;
+    background-color: $Black;
+    z-index: 30;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    height: 100%;
+    width: 80%;
+    max-width: 260px;
+    outline: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    transition: 500ms ease-in-out;
+
+    .headerContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 120px;
+      background-color: $Black;
+      margin-bottom: 17px;
+
+      .contentHeader{
+        background-color: $White;
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        width: 100%;
+        height: 150px;
+        flex-direction: column;
+        
+        .avatar{
+          height: 50px;
+          width: 50px;
+          margin: 20px 0 10px 20px;
+          border-radius: 50%;
+        }
+        
+        .nameUser{
+          font-size: 18px;
+          font-weight: $regular;
+          color: $Black;
+          margin: 0 0 2px 20px;
+        }
+        .emailUser{
+          font-size: 12px;
+          font-weight: $regular;
+          color: $Black;
+          margin: 0 0 10px 20px;
+        }
+        
+      }
+    }
+    .mobileLinks {
+      color: $White;
+      font-size: 1em;
+      font-weight: $regular;
+      padding: 8px 0 8px 20px;
+      text-decoration: none;
+      font-family: 'Open Sans';
+    }
+
+    .logado {
+      border-bottom: 1px solid #bbb;
+      width: 222px;
+      margin: 5px 15px;
+    } 
+
+    .mobileLinks:first-child{
+      margin-top: 70px;
+    }
+
+    .mobileLinks:active {
+      background-color: $White;
+      color: $Black;
+      transition: 1000;
+   }
+  }
+
+  .open {
+    transform: translate3d(300px, 0, 0);
+  }
+}

@@ -1,0 +1,436 @@
+@import '../../styles/base.scss';
+
+.containerProfile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    min-height: 700px;
+    width: 100%;
+    padding: 80px 0;
+
+    .containerDadosUser{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: 1024px;
+        margin: 10px 20px;
+
+        .headerDadosUser{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            padding: 20px;
+
+            .containerAvatarUser{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .containerAvatar{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    border: 1px solid black;
+                    margin: 0 30px 0 0;
+                    background-repeat: no-repeat;
+                    background-position: center;
+
+                    .avatar{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 92px;
+                        width: 92px;
+                        border-radius: 50%;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
+        
+                .contentUser{
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    position: relative;
+        
+                    min-width: 300px;
+                    max-width: 690px;
+        
+                    .nickname{
+                        font-family: OpenSans, sans-serif;
+                        font-size: 26px;
+                        font-weight: $regular;
+                        margin: 15px 0 5px 0;
+                    }
+                    .emailUser{
+                        font-family: OpenSans, sans-serif;
+                        font-size: 18px;
+                        font-weight: $light;
+                        margin: 0;
+                    }
+                }
+            }
+
+            .containerIconEditProfile{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100px;
+                margin-top: 35px;
+                margin-right: 10px;
+                
+                .iconEdit{
+                    cursor: pointer;
+                }
+                .editProfile{
+                    font-family: OpenSans, sans-serif;
+                    font-size: 14px;
+                    font-weight: $regular;
+                    margin: 0 0 0 8px;
+                    cursor: pointer;
+                }
+                a:link, a:visited, a:active  {
+                    text-decoration: none;
+                    color: #000
+                }
+            }
+        }
+       
+        .containerConquests{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-right: 250px;
+            width: 100%;
+            padding: 10px 0;
+
+            .contentConquest{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 10px 20px;
+
+                .iconConquest{
+                    width: 34px;
+                    height: 34px;
+                }
+                .descriptionConquest{
+                    font-family: Montserrat;
+                    font-size: 18px;
+                    font-weight: $regular;
+                    margin: 0 0 0 10px;
+                }
+            }
+        }
+
+        .containerDadosAddress{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            min-height: 200px;
+            margin-right: 420px;
+
+            .contentDados{
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                padding: 0 20px;
+                height: 120px;
+                max-width: 384px;
+
+                .titleDadosAddress{
+                    font-family: OpenSans, sans-serif;
+                    font-size: 16px;
+                    font-weight: $regular;
+                    text-transform: uppercase;
+                    margin:  0 0 20px 0;
+
+                }
+                .descriptionDados{
+                    font-family: Montserrat, sans-serif;
+                    font-size: 16px;
+                    font-weight: $regular;
+                    color: $Black;
+                    margin: 0 0 16px 0;
+                    max-width: 300px;
+                }
+                .containerNasCpfTel{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    
+                    .contentNasCpfTel{
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        flex-direction: column;
+
+                        .titleNasCpfTel{
+                            font-family: OpenSans, sans-serif;
+                            font-size: 14px;
+                            font-weight: $regular;
+                            margin: 0 0 8px 0;
+                        }
+                        .descriptionNasCpfTel{
+                            font-family: Montserrat, sans-serif;
+                            font-size: 16px;
+                            font-weight: $regular;
+                            margin: 0;
+                        }   
+                    }
+
+                    .contentNasCpfTel:nth-child(1){
+                        margin: 0 40px 0 0;
+                    }
+                }
+            }
+        }
+    }
+    .border {
+        width: 100%;
+        border-bottom: 1px solid #bbbbbb;
+    }
+    .containerPlatform{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        min-width: 895px;
+        max-width: 1024px;
+        padding: 30px 0;
+    
+        .titlePlatform{
+            font-family: OpenSans, sans-serif;
+            font-size: 20px;
+            font-weight: $light;
+            text-transform: uppercase;
+            margin-right: 420px;
+        }
+        
+        .containerIconEditConsole{
+            margin-left: 50%;
+            margin-top: -20px;
+        
+            .iconEdit{
+                cursor: pointer;
+            }
+            .editConsole{
+                font-family: OpenSans, sans-serif;
+                font-size: 14px;
+                font-weight: $regular;
+                margin-left: 8px;
+                cursor: pointer;
+            }
+            a:link, a:visited, a:active  {
+                text-decoration: none;
+                color: #000
+            }
+        }
+
+        .consoleName {
+            margin-right: 475px;
+            margin-top: 20px; 
+            .consoleTagname {
+                margin: 15px 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .containerProfile{
+        .containerDadosUser{
+            padding-top: 40px;
+            min-width: 0;
+            .headerDadosUser{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .containerAvatarUser{
+                    .containerAvatar{
+                        width: 80px;
+                        height: 80px;
+                        .avatar{
+                            width: 76px;
+                            height: 76px;
+                        }
+                    }
+                    .contentUser{
+                        .nickname{
+                            margin: 0px 0 5px 0;
+                        }
+                        .emailUser{
+                        }
+                    }
+                }
+                .containerIconEditProfile{
+                    margin: 0 68px 0 0;
+                    .iconEdit{
+
+                    }
+                    .editProfile{
+
+                    }
+                }
+            }
+            .containerConquests{
+                flex-direction: column;
+                padding: 20px 0;
+                margin: 0 auto;
+                .contentConquest{
+                    margin-left: -20px;
+                    .iconConquest{
+
+                    }
+                    .descriptionConquest{
+
+                    }
+                }
+            }
+            .containerDadosAddress{
+              margin: 0 auto;  
+                .contentDados{
+                    height: auto;
+
+                    .titleDadosAddress{
+
+                    }
+                    .descriptionDados{
+
+                    }
+                    .containerNasCpfTel{
+                        .contentNasCpfTel{
+                            .titleNasCpfTel{
+
+                            }
+                            .descriptionNasCpfTel{
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .containerPlatform{
+            min-width: 0;
+            margin: 0 0 0 10px;
+            .titlePlatform{
+                margin: 0;
+            }   
+            .containerIconEditConsole{ 
+                margin: 15px 0;      
+                .iconEdit{
+                }
+                .editConsole{
+                }
+            }
+            .consoleName {
+                margin: 0;
+                .consoleTagname {
+                  
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 430px){
+    .containerProfile{
+        .containerDadosUser{
+            .headerDadosUser{
+                padding: 0;
+                margin: 0 auto;
+                justify-content: center;
+                align-items: center;
+                .containerAvatarUser{
+                    .containerAvatar{
+                        margin: 0 10px 0 0;
+                        width: 70px;
+                        height: 70px;
+                        .avatar{
+                            width: 66px;
+                            height: 66px;
+                        }
+                    }
+                    .contentUser{
+                        min-width: 0;
+                        .nickname{
+                            font-size: 20px;
+                        }
+                        .emailUser{
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .containerIconEditProfile{
+                    margin: 0px 0px 0px 82px;
+                    .iconEdit{
+
+                    }
+                    .editProfile{
+
+                    }
+                }
+            }
+            .containerConquests{
+                margin: 0;
+                .contentConquest{
+                    .iconConquest{
+                        height: 26px;
+                    }
+                    .descriptionConquest{
+                    }
+                }
+            }
+            .containerDadosAddress{
+                .contentDados{
+                    .titleDadosAddress{
+                    }
+                    .descriptionDados{
+                    }
+                    .containerNasCpfTel{
+                        .contentNasCpfTel{
+                            .titleNasCpfTel{
+
+                            }
+                            .descriptionNasCpfTel{
+                                // font-size: 13px;
+                            }
+                        }
+                    }
+                }
+                .contentDados:nth-child(1){
+                }
+                .contentDados:nth-child(2){
+                }
+            }
+        }
+        .containerPlatform{
+            
+            .titlePlatform{
+            }   
+            .containerIconEditConsole{       
+                .iconEdit{
+                }
+                .editConsole{
+                }
+            }
+            .consoleName {
+                .consoleTagname {
+                  
+                }
+            }
+        }
+    }
+}

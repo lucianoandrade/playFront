@@ -1,0 +1,32 @@
+@import '../../styles/base.scss';
+
+.containerHistoricoCompras{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    position: relative;
+    padding: 50px 0;
+    min-height: 800px;
+    
+    .titleHistorico{
+        font-family: Montserrat, sans-serif;
+        font-size: 30px;
+        font-weight: $light;
+        color: $Black;
+        margin: 25px 0 50px 0;
+        text-transform: uppercase;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .containerHistoricoCompras{
+        min-height: calc(100vh - 390px);
+        padding: 90px 0;
+        .titleHistorico{
+            text-align: center;
+            font-size: 22px;
+        }
+    }
+}

@@ -1,0 +1,106 @@
+@import '../../styles/base.scss';
+
+.telaConsole {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .consoles {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        border: none;
+
+        .titleH3 {
+            text-align: center;
+        }
+
+        .dadosConsole {
+            display: flex;
+            flex-direction: column;
+            width: 350px;
+            margin-top: 30px;
+        
+            fieldset {
+                border: none;
+                position: relative;
+                width: 350px;
+                padding: 0;
+                margin: 0;
+                margin-bottom: 15px;
+                display: flex;
+        
+                .label {
+                    position: absolute;
+                    top: 50%;
+                    left: 15px;
+                    margin-top: -10px;
+                    color: $Grey3;
+                }
+                input:focus + .label, input:valid + .label {
+                    color: $Black;
+                    top: 10%;
+                    margin-top: 0;
+                    font-size: 12px;
+                }
+        
+                input:valid + .label {
+                    color: #000;
+                }
+        
+                input[type="text"] {
+                    display: block;
+                    background-color: $White;
+                    box-shadow: 1px 1px 6px 0px rgba(193,193,193,1);
+                    width: calc(350px - 15px);
+                    padding: 20px 0 5px 15px;
+                    border: 0;
+                    outline:none;
+                }
+            }
+            
+            .continuar {
+                padding: 11px 66px;
+                margin-top: 15px;
+                text-align: center;
+                font-size: 16px;
+                font-weight: $semiBold;
+                color: $White; 
+                text-transform: uppercase;
+                border: 0;
+                margin-bottom: 80px;
+                background: $Grey2;
+            }        
+        }
+    }
+}
+
+
+@media screen and (max-width: 460px) {
+    .telaConsole {
+        .consoles {
+            .titleH3 {
+                max-width: 280px;
+            }
+            .dadosConsole {
+                max-width: 280px;
+                fieldset {
+                    max-width: 280px;
+                    input {
+                        max-width: (280px - 15px);
+                    }
+                } 
+            }
+        }
+    }            
+}
+
+@media screen and (min-height: 1186px) {
+    .telaConsole {
+        height: 100vh;
+    } 
+}

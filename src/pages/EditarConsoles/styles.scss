@@ -1,0 +1,188 @@
+@import '../../styles/base.scss';
+
+.containerEditConsole {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 60px 0 80px;
+
+    .contentEditConsole {
+        margin: auto;
+        .titleEditConsole {
+            font-weight: $light;
+            font-size: 30px;
+            max-width: 350px;
+            margin: 0 auto 30px;
+            padding: 0 15px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .subTitleEditConsole {
+            margin-bottom: 30px;
+            font-size: 18px;
+            font-weight: $regular;
+            text-align: center;
+        }
+
+        .dadosConsole {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 450px;
+        
+            fieldset {
+                border: none;
+                position: relative;
+                width: 450px;
+                padding: 0;
+                margin: 0;
+                margin-bottom: 15px;
+        
+                .label {
+                    position: absolute;
+                    top: 50%;
+                    left: 15px;
+                    margin-top: -10px;
+                    color: $Grey3;
+                }
+
+                input:focus + .label, input:valid + .label {
+                    color: $Black;
+                    top: 10%;
+                    margin-top: 0;
+                    font-size: 12px;
+                }
+                
+                input:valid + .label {
+                    color: #000;
+                }
+        
+                input[type="text"] {
+                    display: block;
+                    background-color: $White;
+                    box-shadow: 1px 1px 6px 0px rgba(193,193,193,1);
+                    width: calc(450px - 15px);
+                    padding: 20px 0 5px 15px;
+                    border: 0;
+                    outline:none;
+                }
+            }
+            .containerBtn{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                margin-top: 25px;
+                
+                .btnCancel{
+                    text-transform: uppercase;
+                    width: 185px;
+                    height: 50px;
+                    text-align: center;
+                    font-size: 16px;
+                    font-weight: $regular;
+                    color: $Black; 
+                    background-color: $White;
+                    text-transform: uppercase;
+                    border: 1px solid $Black;
+                }
+                .btnSave{
+                    text-transform: uppercase;
+                    width: 235px;
+                    height: 50px;
+                    margin-left: 30px;
+                    text-align: center;
+                    font-size: 16px;
+                    font-weight: $semiBold;
+                    color: $White; 
+                    background-color: $Black;
+                    text-transform: uppercase;
+                    border: 0;
+                }
+            }       
+        }
+    }
+}
+
+
+@media screen and (min-height: 1127px){
+    .containerEditConsole {
+        height: 100vh;
+        padding: 0 auto;
+        margin: -240px 0;
+        .contentEditConsole {
+            .titleEditConsole {
+            }
+            .subTitleEditConsole {
+            }
+    
+            .dadosConsole {
+           
+                fieldset {
+                }
+                .containerBtn{    
+                    .btnCancel{
+                    }
+                    .btnSave{
+                    }
+                }       
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .containerEditConsole {
+        padding: 130px 0 80px;
+        .contentEditConsole {
+            .titleEditConsole {
+            }
+            .subTitleEditConsole {
+            }
+    
+            .dadosConsole {
+           
+                fieldset {
+                }
+                .containerBtn{    
+                    .btnCancel{
+                    }
+                    .btnSave{
+                    }
+                }       
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px){
+    .containerEditConsole {
+        padding: 130px 0 80px;
+        .contentEditConsole {
+            .titleEditConsole {
+            }
+            .subTitleEditConsole {
+            }
+    
+            .dadosConsole {
+                width: 300px;
+           
+                fieldset {
+                    width: 300px;            
+                    input[type="text"] {
+                        width: calc(300px - 15px);
+                    }
+                }
+                .containerBtn{    
+                    .btnCancel{
+                        width: 125px;
+                    }
+                    .btnSave{
+                        width: 185px;
+                    }
+                }       
+            }
+        }
+    }
+}

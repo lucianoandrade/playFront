@@ -1,0 +1,118 @@
+@import '../../../../styles/base.scss';
+
+.sobre{
+    background-color: $White;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid $Grey2;
+    width: 100%;
+    padding: 60px 0;
+
+    .container-sobre{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        .sobre-titulo{
+            font-family: 'Open Sans', sans-serif;
+            font-weight: $light;
+            font-size:30px;
+            width: 400px;
+            margin-right: 1em;
+            margin-top: 0;
+
+            p {
+                margin: 5% 0;
+            }
+        }
+
+        .div-descricao{
+            width: 441px;
+            .descricao-sobre{
+                margin: 1em 0 1em 0;
+            }
+            
+        }
+        
+        .btn-participe{
+            padding: 20px 30px;
+            color: $White;
+            text-transform: uppercase;
+            background-color: $Black;
+            border-radius: 2px;
+            border: 0;
+            font-weight: $semiBold;
+            font-family: Montserrat;
+            margin-top: 1.5em;
+        }
+        
+        .btn-participe:hover{
+            background-color: $ColorDestaq;
+        }
+    
+        @media screen and (max-width: 900px){
+            .sobre-titulo{
+                margin-right: 1em;
+            }
+        }
+
+        @media screen and (max-width:768px){
+            .sobre-titulo{
+                font-size: 30px;
+                width: 200px;
+            }
+            .div-descricao{
+                width: 320px;
+            }
+            .btn-participe{
+                margin-top: 1em;
+            }
+        }
+
+        @media screen and (max-width: 425px){
+            flex-direction: column;
+            align-items: center;
+            
+            .sobre-titulo{
+                width: 300px;
+                margin-bottom: 1.5em;
+                text-align: center;
+                margin-right: 0;
+                font-size: 25px;
+            }
+            .div-descricao{
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .btn-participe{
+                margin-bottom: 1.5em;
+                margin-top: 2em;
+            }
+            .descricao-sobre {
+                margin: 0.5em;
+                width: 300px;
+            }
+        }
+    }
+
+    @media screen and (max-width:320px){
+        flex-direction: column;
+    
+        .sobre-titulo{
+            width: 300px;
+        }
+        .descricao-sobre{
+            width: 310px;
+        } 
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .sobre{
+        margin-top: 60px;
+    }
+}

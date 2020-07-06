@@ -1,0 +1,263 @@
+@import '../../styles/base.scss';
+
+.containerEditProfile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 800px;
+    padding: 120px 0;
+
+    .contentEditProfile{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        max-width: 450px;
+
+        .titleEditProfile{
+            font-family: Montserrat, sans-serif;
+            font-size: 28px;
+            font-weight: $regular;
+            text-align: center;
+            text-transform: uppercase; 
+            margin: 0;
+        }
+        .containerEditAvatar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 44px 0 0 0;
+
+            .containerAvatar{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+                margin: 0 20px 0 0;
+                border: 1px solid $Black;
+
+                #thumbnail{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 92px;
+                    width: 92px;
+                    border-radius: 50%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    
+                }
+            }
+            
+            .containerEditRemove{
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+                margin-left: 15px;
+
+                .containerPutAvatar{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    cursor: pointer;
+
+                    .iconEdit{
+                        margin: 0 8px 0 0;
+                    }
+                    .textEdit{
+                        font-family: OpenSans, sans-serif;
+                        font-size: 12px;
+                        font-weight: normal;
+                        margin: 0;
+                    }
+
+                    .inputAvatar{
+                        display: none;
+                    }
+                }
+
+                .containerPutAvatar:nth-child(2){
+                    margin: 14px 0 0 0;
+                }
+            }
+        }
+
+        .dadosPessoais {
+            display: flex;
+            flex-direction: column;
+            width: 450px;
+            margin-top: 30px;
+
+            .blocoDadosPessoais{
+            }
+
+            .titleH3 {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            
+            .error {
+                display: flex;
+                justify-content: center;
+            }
+
+            fieldset {
+                border: none;
+                position: relative;
+                width: 450px;
+                padding: 0;
+                margin: 0 0 15px 0;
+            
+                .label {
+                    position: absolute;
+                    top: 50%;
+                    left: 15px;
+                    margin-top: -10px;
+                    color: $Grey3;
+                }
+        
+                input:focus + .label, input:valid + .label {
+                    color: $Black;
+                    top: 10%;
+                    margin-top: 0;
+                    font-size: 12px;
+                    font-weight: $semiBold;
+                }
+        
+                input:valid + .label {
+                    color: #000;
+                }
+        
+                input[type="text"], input[type="date"] {
+                    display: block;
+                    background-color: $White;
+                    box-shadow: 1px 1px 6px 0px rgba(193,193,193,1);
+                    width: calc(450px - 15px);
+                    padding: 20px 0 5px 15px;
+                    border: 0;
+                    outline:none;
+                }
+
+                input[type="date"], {
+                    padding: 15px 0 5px 15px;
+                    color: transparent;
+                }
+               
+                input[type="date"]:focus, input[type="date"]:valid {
+                    color: #000;
+                }
+            }
+                .doisCampos {
+                    display: flex;
+                    justify-content: space-around;
+
+                    #nascimento {
+                        max-width: 150px;
+                        margin-right: 15px;
+                    }
+                    #cpf {
+                        max-width: 250px;
+                    }
+
+                }
+
+                
+
+                .containerBtn{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    margin-top: 25px;
+
+                    .btnCancel{
+                        text-transform: uppercase;
+                        width: 185px;
+                        height: 50px;
+                        text-align: center;
+                        font-size: 16px;
+                        font-weight: $regular;
+                        color: $Black; 
+                        background-color: $White;
+                        text-transform: uppercase;
+                        border: 1px solid $Black;
+                    }
+                    .btnSave{
+                        text-transform: uppercase;
+                        width: 235px;
+                        height: 50px;
+                        margin-left: 30px;
+                        text-align: center;
+                        font-size: 16px;
+                        font-weight: $semiBold;
+                        color: $White; 
+                        text-transform: uppercase;
+                        border: 0;
+                    }
+                }
+        } 
+    }
+}
+
+@media screen and (max-width: 768px){
+    .containerEditProfile{
+        padding: 110px 0;
+        .contentEditProfile{
+            max-width: 450px;
+            .titleEditProfile{
+                font-size: 24px;
+            }
+            .containerEditAvatar{
+                .containerAvatar{
+                    .avatar{
+                    }
+                }
+                .containerEditRemove{
+                    .containerPutAvatar{
+                        .iconEdit{
+
+                        }
+                        .textEdit{
+
+                        }
+                    }
+                }
+            }
+
+            .dadosPessoais {
+                max-width: 280px;
+                fieldset {
+                    max-width: 280px;
+                    input {
+                        max-width: (280px - 15px);
+                    }
+                }
+                .doisCampos {
+                    flex-wrap: wrap;
+                    fieldset {
+                        max-width: 280px;
+                        input {
+                            max-width: (280px - 15px);
+                        }
+                        #nascimento {
+                            max-width: 265px;
+                            margin: 0;
+                        }
+                        #cpf {
+                            max-width: 265px;
+                        }
+                        #nickname{
+                            max-width: 266px;
+                        }
+                    }
+                }                
+            }
+        }
+    }
+}

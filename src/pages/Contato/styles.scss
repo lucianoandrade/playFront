@@ -1,0 +1,231 @@
+@import '../../styles/base.scss';
+
+.containerContato{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 500px;
+
+    .contentContato{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 60px 0 90px;
+
+        .titleContato{
+            font-size: 30px;
+            font-weight: $light;
+            color: $Black;
+            text-transform: uppercase;
+        }
+
+        .paragrafyContato{
+            font-family: Montserrat;
+            font-size: 18px;
+            max-width: 440px;
+            text-align: center;
+            margin: 30px 5px 40px 5px;
+        }
+
+        .formContato{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            max-width: 440px;
+
+            fieldset {
+                border: none;
+                position: relative;
+                width: 100%;
+                padding: 0;
+                margin: 0 0 15px 0;
+            
+                .label {
+                    position: absolute;
+                    top: 50%;
+                    left: 15px;
+                    margin-top: -10px;
+                    color: $Grey3;
+                }
+        
+                input:focus + .label, input:valid + .label {
+                    color: $Black;
+                    top: 10%;
+                    margin-top: 0;
+                    font-size: 12px;
+                    font-weight: $semiBold;
+                }
+        
+                input:valid + .label {
+                    color: #000;
+                }
+        
+                input[type="text"] {
+                    display: block;
+                    background-color: $White;
+                    box-shadow: 1px 1px 6px 0px rgba(193,193,193,1);
+                    width: calc(450px - 15px);
+                    padding: 20px 0 5px 15px;
+                    border: 0;
+                    box-sizing: border-box;
+                    outline:none;
+                }
+
+                input[type="email"] {
+                    display: block;
+                    background-color: $White;
+                    box-shadow: 1px 1px 6px 0px rgba(193,193,193,1);
+                    width: calc(450px - 15px);
+                    padding: 20px 0 5px 15px;
+                    border: 0;
+                    box-sizing: border-box;
+                    outline:none;
+                }
+
+                textarea:focus + .label, textarea:valid + .label {
+                    color: $Black;
+                    top: 4px;
+                    margin-top: 0;
+                    font-size: 12px;
+                    font-weight: $semiBold;
+                }
+        
+                textarea:valid + .label {
+                    color: #000;
+                }
+
+                input[disabled] + .label, .invalid + .label {
+                    color: $Black;
+                    top: 10%;
+                    margin-top: 0;
+                    font-size: 12px;
+                    left: 15px;
+                }
+
+                textarea + .label {
+                    position: absolute;
+                    top: 2px;
+                    left: 14px;
+                    margin-top: 10px;
+                    color: $Grey3;
+                }
+
+                textarea{
+                    height: 120px;
+                    resize: none;
+                    width: 100%;
+                    padding: 20px 0 5px 15px;
+                    box-shadow: 1px 1px 6px 0px rgba(193,193,193,1);
+                    border: none;
+                    box-sizing: border-box;
+                    outline:none;
+                }
+            }
+
+            .btnEnviar{
+                padding: 11px 66px;
+                margin: 15px 5px 0 5px;
+                background: $Grey2;
+                text-align: center;
+                font-size: 14px;
+                font-weight: $semiBold;
+                color: $White; 
+                text-transform: uppercase;
+                border: 0;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .containerContato{
+        .contentContato{
+            margin: 130px 0 90px;
+            .titleContato{
+
+            }
+            .paragrafyContato{
+            }
+            .formContato{
+                fieldset{
+
+                    input[type="text"]{
+
+                    }
+                    input[type="email"]{
+                    }
+
+                    textarea{
+                    }
+                }
+                .btnEnviar{
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .containerContato{
+        .contentContato{
+            .titleContato{
+
+            }
+            .paragrafyContato{
+                margin: 30px 10px 40px;
+            }
+            .formContato{
+                fieldset{
+
+                    input[type="text"]{
+                        width: 350px;
+                    }
+                    input[type="email"]{
+                        width: 350px;
+                    }
+
+                    textarea{
+                        width: 350px;
+                    }
+                }
+                .btnEnviar{
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .containerContato{
+        .contentContato{
+            .titleContato{
+
+            }
+            .paragrafyContato{
+
+            }
+            .formContato{
+                fieldset{
+
+                    input[type="text"]{
+                        width: 300px;
+                    }
+                    input[type="email"]{
+                        width: 300px;
+                    }
+
+                    textarea{
+                        width: 300px;
+                    }
+                }
+                .btnEnviar{
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,117 @@
+@import '../../styles/base.scss';
+
+.containerNovaSenha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 600px;
+
+    .lightBox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 460px;
+        height: 480px;
+        background-color: $White;
+
+        .lightBoxContent{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            position: relative;
+    
+            img{
+            }
+    
+            h3{
+                text-align: center;
+                margin: 20px auto;
+            }
+    
+            .paragraph{
+                text-align: center;
+                margin: 0px 40px 30px 40px;
+            }
+            
+            .formConfirm{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+    
+                fieldset {
+                border: none;
+                position: relative;
+                width: 350px;
+                padding: 0;
+                margin: 0;
+                margin-bottom: 15px;
+
+                .label {
+                    position: absolute;
+                    top: 50%;
+                    left: 15px;
+                    margin-top: -10px;
+                    color: $Grey3;
+                }
+                input:focus + .label, input:valid + .label {
+                    color: $Black;
+                    top: 10%;
+                    margin-top: 0;
+                    font-size: 12px;
+                    left: 15px;
+                }
+
+                input:valid + .label {
+                    color: #000;
+                }
+
+                input[type="password"] {
+                    display: block;
+                    background-color: $White;
+                    box-shadow: 1px 1px 6px 0px rgba(193,193,193,1);
+                    width: calc(350px - 15px);
+                    padding: 20px 0 5px 15px;
+                    border: 0;
+                    outline: none;
+
+                    &#senha {
+                        font-size: 16px;
+                    }
+                }
+            }
+    
+                .btnDefault{
+                    padding: 0;
+                    width: 100%;
+                    height: 45px;
+                    margin-bottom: 20px;
+                    background-color: $Grey1;
+                    outline: none;
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {    
+    .containerNovaSenha{
+        .lightBox{
+            .lightBoxContent{
+                .formConfirm{
+                    fieldset {
+                        max-width: 280px;
+                        input {
+                            max-width: (280px - 15px);
+                        }
+                    }
+                } 
+            }
+        }    
+    }
+}

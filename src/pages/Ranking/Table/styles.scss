@@ -1,0 +1,105 @@
+@import '../../../styles/base.scss';
+
+.tableRanking{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    width: 100%;
+    
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        width: 100%;
+
+        .title{
+            font-size: 12px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: $regular;
+            text-transform: uppercase;
+            display: inline;
+        }
+
+        .title:nth-child(1){
+            margin-left: 75px;
+        }
+        .title:nth-child(2){
+            margin-right: 35px;
+        }
+    }
+
+    // --> Card <-- //
+    .cardRanking{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        width: 100%;
+        height: 60px;
+        border-top: 1px solid $Grey2;
+
+        .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .position{
+                text-align: center;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: $regular;
+                font-size: 16px;
+                text-align: center;
+                width: 30px;
+                margin: 0 24px;
+            }
+
+            .arcoAvatar{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 40px;
+                width: 40px;
+                border: 1px solid $Black;
+                border-radius: 50%;
+                margin-right: 24px;
+
+                .avatar{
+                    display: flex;
+                    height: 34px;
+                    width: 34px;
+                    border-radius: 50%;
+                }
+            }
+
+            .nickname{
+                font-family: 'Open Sans', sans-serif;
+                font-weight: $regular;
+                font-size: 16px;
+            }
+        }
+
+        .victories{
+            font-family: 'Open Sans', sans-serif;
+            font-weight: $regular;
+            font-size: 16px;
+            margin-right: 35px;
+            display: flex;
+
+            img {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+.selected{
+    background-color: $Black;
+    color: $White;
+
+    .arcoAvatar{
+        border: 1px solid $White !important;
+    }
+}

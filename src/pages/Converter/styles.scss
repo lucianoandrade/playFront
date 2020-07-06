@@ -1,0 +1,182 @@
+@import '../../styles/base.scss';
+
+.containerConverter{
+    width: 100%;
+    min-height: 600px;
+    
+    .contentConverter {
+        margin-top: 51px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        .infoConverter {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            h1 {
+                text-transform: uppercase;
+                font-size: 30px;
+                font-weight: $light;
+                margin: 0;
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: $regular;
+                max-width: 825px;
+                text-align: center;
+                margin: 20px 30px;
+            }
+
+            .saldo {
+                font-size: 22px;
+                font-weight: $light;
+                margin-top: 35px;
+                text-transform: uppercase;
+            }
+        }
+
+        .converterStars {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            fieldset {
+                border: none;
+                position: relative;
+                width: 240px;
+            
+                .label {
+                    position: absolute;
+                    top: 30%;
+                    left: 25px;
+                    margin: auto;
+                    color: $Grey3;              
+                }
+                
+                input:focus + .label, input:valid + .label {
+                    color: $Black;
+                    top: 10%;
+                    margin-top: 0;
+                    font-size: 12px;
+                    left: 15px;
+                }
+
+                input:valid + .label {
+                    color: #000;
+                }
+
+                input[type="number"] {
+                    display: block;
+                    background-color: $White;
+                    box-shadow: 1px 1px 6px 0px rgba(193,193,193,1);
+                    width: 234px;
+                    padding: 20px 0 10px 5px;
+                    border: 0;
+                    outline: none;
+                }
+            }
+
+            .seta{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 0 70px;
+            }
+
+            .img-star {
+                width: 80px;
+                height: 80px;
+                margin: 0 30px
+            }
+
+        }
+
+        .btnDefault {
+            background-color: $Grey2;
+            width: 200px;
+            height: 48px;
+            margin-bottom: 80px;
+            margin-top: 46px;
+            padding: 0;
+            outline: none;
+        }
+        .btnDefault:hover {
+            background-color: $Black
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .containerConverter {
+        width: 100%;
+        min-height: calc(100vh - 250px);
+        display: flex;
+        justify-content: center;
+        .contentConverter {
+            .infoConverter {
+                h1 {
+                    font-size: 22px;
+                }
+
+                p {
+                    font-size: 14px;
+                    margin-top: 10px;
+                }
+                .saldo {
+                    font-size: 16px;
+                }
+            }
+            max-width: 400px;
+            .converterStars {
+                max-width: 110px; 
+                fieldset { 
+                    max-width: 110px;
+                    input {
+                        max-width: 110px;
+                    }                  
+                }
+                .seta{      
+                    margin: 0;
+                }
+                .img-star {
+                   display: none;
+                }  
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 726px ) and (max-width: 1025px) {
+    .containerConverter{
+        width: 100%;
+        min-height: calc(100vh - 500px);
+        display: flex;
+        justify-content: center;
+        .contentConverter {
+            max-width: 600px;
+            .converterStars {
+                max-width: 160px; 
+                fieldset { 
+                    max-width: 160px;
+                    input {
+                        max-width: 160px;
+                    }                  
+                }
+                .seta{      
+                    margin: 10px;
+                }
+                .img-star {
+                    margin: 0 5px;
+                    width: 50px;
+                    height: 50px;
+                }  
+            }
+        }
+    }
+}

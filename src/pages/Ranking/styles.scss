@@ -1,0 +1,38 @@
+@import '../../styles/base.scss';
+
+.containerRanking{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 60px 0;
+
+    .contentRanking{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-width: 318px;
+        max-width: 620px;
+
+        h1{
+            font-size: 30px;
+            font-family: 'Open Sans', sans-serif;
+            text-transform: uppercase;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        p {
+            text-align: center;
+            margin: 50px 0 80px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .containerRanking{
+        padding: 130px 0 60px;
+        .contentRanking{
+        }
+    }
+}

@@ -1,0 +1,389 @@
+@import '../../styles/base.scss';
+
+.containerRegras{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    padding: 60px 0;
+    min-height: 800px;
+
+    .contentRegras{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        width: 100%;
+
+        .titleRegras{
+            font-size: 30px;
+            font-weight: $light;
+            color: $Black;
+            text-transform: uppercase;         
+        }
+
+        .paragrafyRegras{
+            font-family: Montserrat;
+            font-size: 18px;
+            text-align: center;
+            max-width: 700px;
+            margin: 30px 0 50px;
+        }
+
+        .containerBtn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 0 50px 0;
+
+            .btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font-size: 16px;
+                margin: 10px;
+                padding: 0 20px;
+                height: 65px;
+                width: 240px;
+                text-align: center;
+                background-color: $White;
+                color: $Black;
+                box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.3);
+                cursor: pointer;
+            
+                &.selecionado {
+                  transition: all 0.5s;
+                  background-color:$Black;
+                  color: $White;
+                }
+              }
+              
+              .buttonContainer {
+                position: relative;
+              }
+        }
+
+        .containerTermosRegras{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+      
+          width: 1100px;
+          margin: 15px 15px;
+          height: 100%;
+
+          .regras{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            position: relative;
+            min-height: 60px;
+            width: 100%;
+            max-height: 100%;
+            box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.3);
+      
+            .indiceRegras{
+              display: flex;
+              justify-content: center;
+              align-items: flex-start;
+              position: absolute;
+              height: 100%;
+              left: 0px;
+      
+              background-color: $Black;
+              color: $White;
+              width: 60px;
+              transition: all 0.5s;
+              
+              .indice {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                width: 60px;
+                height: 60px;
+              }
+            }
+            
+            .titleTermosRegras{
+              text-transform: uppercase;
+              text-align: left;
+              position: relative;
+              font-weight: 500;
+              width: 60%;
+              right: 145px;
+              height: 100%;
+              margin: 20px 0;
+              color: $Black;
+            }
+      
+            .tab{
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              position: absolute;
+              
+              transition: all 0.5s;
+              right: 0px;
+              top: 0;
+              
+              color: $White;
+              height: 60px;
+              width: 60px;
+      
+              .btnTab{
+                display: block;
+                height: 1px;
+                width: 12px;
+                background-color: $Black;
+                border-radius: 2px;
+              }
+      
+              &.giraSeta {
+                transform: rotate(180deg);
+              }
+      
+              .btnTab:nth-child(1){
+                transform: rotate(45deg);
+                position: relative;
+                left: 2px;
+              }
+      
+              .btnTab:nth-child(2){
+                transform: rotate(-45deg);
+                position: relative;
+                right: 2px;
+              }
+            }
+      
+            .contentIndice{
+              max-height: 0;
+              overflow: hidden;
+              transition: all 0.5s;
+              .topicRegras {
+                margin-bottom: 60px;
+                .paragrafyTermosRegras{
+                  max-width: 970px;
+                  min-width: 200px;
+                  text-align: left;
+                  padding: 0 60px;
+                  margin: 15px 15px;
+                }
+                .paragrafyTitleRegras{
+                  padding: 0 60px;
+                  text-align: left;
+                  margin: 15px 15px;
+                  text-transform: uppercase;
+                  font-weight: 500;
+                }
+              }
+            }
+          }
+        
+          &.active {
+            .contentIndice{
+              display: block;
+              max-height: 1000px;
+              
+            }
+            .indiceRegras{
+              background-color: $ColorDestaq; 
+              
+            }
+            .tab {
+              transform: rotate(180deg);
+            }
+          }
+        }
+    } 
+}
+
+@media screen and (max-width: 1025px){
+  .containerRegras{
+    min-height: calc(100vh - 250px);
+    margin-top: 60px;
+    .contentRegras{
+      .titleRegras{
+      }
+      .paragrafyRegras{
+      }
+      .containerBtn{
+        .btn{
+        }
+      }
+      .containerTermosRegras{
+        width: 800px;
+        .regras{
+          .indiceRegras{
+            .indice{
+            }
+          }
+          .titleTermosRegras{
+            right: 80px;
+          }
+          .tab{
+            .btnTab{
+            }
+          }
+          .contentIndice{
+            .paragrafyTermosRegras{
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .containerRegras{ 
+    .contentRegras{
+      .titleRegras{
+      }
+      .paragrafyRegras{
+      }
+      .containerBtn{
+        .btn{
+          height: 60px;
+          width: 160px;
+        }
+      }
+      .containerTermosRegras{
+        width: 600px;
+        .regras{          
+          .indiceRegras{
+            .indice{
+            }
+          }
+          .titleTermosRegras{
+            right: 40px;
+          }
+          .tab{
+            .btnTab{
+            }
+          }
+          .contentIndice{
+            .paragrafyTermosRegras{          
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 460px){
+  .containerRegras{
+    .contentRegras{
+      .titleRegras{
+        margin-bottom: 20px;
+      }
+      .paragrafyRegras{
+        margin: 0 15px;
+      }
+      .containerBtn{
+        flex-wrap: wrap;
+          margin: 20px 0;
+        .btn{
+          
+        }
+      }
+      .containerTermosRegras{
+        width: 360px;
+        .regras{          
+          .indiceRegras{
+            .indice{
+            }
+          }
+          .titleTermosRegras{
+            left: 5px;
+            font-size: 14px;
+          }
+          .tab{
+            .btnTab{
+              width: 10px;
+            }
+          }
+          .contentIndice{
+            .paragrafyTitleRegras {
+              font-size: 14px;
+            }
+            .paragrafyTermosRegras{
+              font-size: 14px;    
+              margin: 20px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 375px){
+  .containerRegras{
+    .contentRegras{
+      .titleRegras{
+      }
+      .paragrafyRegras{
+      }
+      .containerBtn{
+        .btn{
+          
+        }
+      }
+      .containerTermosRegras{
+        width: 300px;
+        margin: 15px 0;
+        .regras{          
+          .indiceRegras{
+            width: 40px;
+            .indice{
+              width: 40px;
+            }
+          }
+          .titleTermosRegras{
+            left: 5px;
+            font-size: 14px;
+            width: 220px;
+          }
+          .tab{
+            width: 40px;
+            height: 40px;
+            margin: 10px 0;
+            .btnTab{
+            }
+          }
+          .contentIndice{
+            .topicRegras {
+              width: 300px;
+              .paragrafyTermosRegras{
+                font-size: 14px;
+                width: 220px;
+                margin: 0 20px;
+                padding: 0 30px;
+              }
+              .paragrafyTitleRegras {
+                width: 220px;
+                font-size: 14px;
+                font-weight: 500;
+                margin: 10px 20px;
+                padding: 0 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

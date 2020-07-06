@@ -1,0 +1,35 @@
+@import '../../../styles/base.scss';
+
+.containerNavigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    list-style-type: none;
+    outline: none;
+    padding: 0;
+
+    .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+
+        height: 26px;
+        width: 26px;
+        cursor: pointer;
+    }
+
+    .page, .rest{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        outline: none;
+        min-height: 26px;
+        min-width: 26px;
+        padding: 0 4px;
+        margin: 0 4px;
+    }
+
+}

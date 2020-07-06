@@ -1,0 +1,52 @@
+@import "../../../styles/base.scss";
+
+.loaderPlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 800px;
+  width: 100%;
+ 
+  .loadingPlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 8%;
+    height: 8%;
+    animation: rotate 800ms linear infinite; 
+    
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(-360deg);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .loaderPlay {
+    min-height: calc(100vh - 290px);
+    .loadingPlay {
+      width: 15%;
+      height: 15%;
+    }     
+  }
+}
+
+@media screen and (max-width: 768px){
+  .loaderPlay {
+    min-height: 100vh;
+    .loadingPlay {
+      width: 25%;
+      height: 25%;
+    }     
+  }
+}
+
+
+

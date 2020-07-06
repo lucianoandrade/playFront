@@ -1,0 +1,55 @@
+@import '../../../../styles/base.scss';
+
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 341px;
+    
+    .titleH1{
+        color: $White;
+        max-width: 620px;
+        text-align: center;
+        margin-top: -40px;
+    }
+}
+
+@media screen and (max-width: 1280px){
+    .banner{
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .banner{
+        position: relative;
+        top: 70px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .banner{
+        .logo{
+            height: 150px;
+        }
+
+        .titleH1{
+            font-size: 1.8em;    
+        }
+    }
+}
+
+@media screen and (max-width: 414px){
+    .banner{
+
+        .logo{
+        }
+        .titleH1{
+            font-size: 1.8em;
+            text-align: center;
+            padding: 40px;
+        }
+    }
+}

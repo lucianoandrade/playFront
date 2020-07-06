@@ -1,0 +1,362 @@
+@import '../../../styles/base.scss';
+
+.containerCondicaoStars{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    padding: 0 0 80px 0;
+
+    .contentTermos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        width: 100%;
+
+        h1{
+            font-family: Montserrat, sans-serif;
+            font-size: 30px;
+            font-weight: $light;
+            color: $Black;
+            text-transform: uppercase;
+            margin: 0 10px;
+            text-align: center;
+        }
+
+        p{
+            font-family: Montserrat, sans-serif;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .containerBtn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin: 50px 0;
+
+            .btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font-size: 16px;
+                margin: 10px;
+                padding: 0 20px;
+                height: 65px;
+                width: 240px;
+                text-align: center;
+                background-color: $White;
+                color: $Black;
+                box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.3);
+            
+                &.selecionado {
+                  transition: all 0.5s;
+                  background-color:$Black;
+                  color: $White;
+                }
+              }
+              
+              .buttonContainer {
+                position: relative;
+              }
+        }
+
+        .containerTermosStars{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+      
+          width: 1100px;
+          margin: 15px 10px;
+
+          .termos{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            position: relative;
+            min-height: 60px;
+            width: 100%;
+            box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.3);
+      
+            .indiceTermos{
+              display: flex;
+              justify-content: center;
+              align-items: flex-start;
+              position: absolute;
+              height: 100%;
+              left: 0px;
+      
+              background-color: $Black;
+              color: $White;
+              width: 60px;
+              transition: all 0.5s;
+              
+              .indice {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                width: 60px;
+                height: 60px;
+              }
+            }
+            
+            .titleTermos{
+              text-transform: uppercase;
+              text-align: left;
+              position: relative;
+              width: 60%;
+              right: 145px;
+              height: 100%;
+              color: $Black;
+              margin: 20px 0;
+              font-size: 16px;
+              font-weight: 500;
+
+            }
+      
+            .tab{
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              position: absolute;
+              
+              transition: all 0.5s;
+              right: 0px;
+              top: 0;
+              
+              color: $White;
+              height: 60px;
+              width: 60px;
+      
+              .btnTab{
+                display: block;
+                height: 1px;
+                width: 12px;
+                background-color: $Black;
+                border-radius: 2px;
+              }
+      
+              &.giraSeta {
+                transform: rotate(180deg);
+              }
+      
+              .btnTab:nth-child(1){
+                transform: rotate(45deg);
+                position: relative;
+                left: 2px;
+              }
+      
+              .btnTab:nth-child(2){
+                transform: rotate(-45deg);
+                position: relative;
+                right: 2px;
+              }
+            }
+      
+            .contentIndice{
+              max-height: 0;
+              overflow: hidden;
+              transition: all 0.5s;
+
+              .paragrafyTermos{
+                left: 60px;
+                position: relative;
+                width: 85%;
+                text-align: left;
+                margin: 15px 15px;
+              }
+            }   
+          }
+
+          &.active {
+            .contentIndice{
+              display: block;
+              max-height: 200px;
+              
+            }
+            .indiceTermos{
+              background-color: $ColorDestaq; 
+              
+            }
+            .tab {
+              transform: rotate(180deg);
+            }         
+          }
+        }
+    } 
+}
+
+@media screen and (max-width: 1024px){
+  .containerCondicaoStars{
+    .contentTermos{
+      
+      .containerBtn{
+        .btn{
+        }
+      }
+      .containerTermosStars{
+        width: 1000px;
+        .termos{
+          .indiceTermos{
+            .indice{
+            }
+          }
+          .titleTermos{
+            right: 130px;
+          }
+          .tab{
+            .btnTab{
+            }
+          }
+          .contentIndice{
+            .paragrafyTermos{
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .containerCondicaoStars{
+    p{
+      margin: 15px 15px;
+    }
+    .contentTermos{
+      .containerBtn{
+        .btn{
+          height: 60px;
+          width: 180px;
+        }
+      }
+      .containerTermosStars{
+        width: 700px;
+        .termos{
+          
+          .indiceTermos{
+            .indice{
+
+            }
+          }
+          .titleTermos{
+            right: 65px;
+          }
+          .tab{
+            .btnTab{
+
+            }
+          }
+          .contentIndice{
+            .paragrafyTermos{
+              
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 426px){
+  .containerCondicaoStars{
+    .contentTermos{
+      p{
+        margin: 15px 15px;
+      }
+      .containerBtn{
+        flex-wrap: wrap;
+        margin: 20px 0;
+        .btn{
+          
+        }
+      }
+      .containerTermosStars{
+        width: 380px;
+        .termos{
+          
+          .indiceTermos{
+            .indice{
+
+            }
+          }
+          .titleTermos{
+            width: 70%;
+            left: 30px;
+            font-size: 14px;
+            margin: 10px;
+          }
+          .tab{
+            width: 40px;
+            height: 40px;
+            margin: 10px 0;
+            .btnTab{
+              width: 10px;
+            }
+          }
+          .contentIndice{
+            .paragrafyTermos{
+              width: 75%;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px){
+  .containerCondicaoStars{
+    .contentTermos{
+      p{
+      }
+      .containerBtn{
+        .btn{
+          
+        }
+      }
+      .containerTermosStars{
+        width: 300px;
+        .termos{
+          
+          .indiceTermos{
+            width: 40px;
+            .indice{
+
+            }
+          }
+          .titleTermos{
+            left: 0;
+            font-size: 14px;
+          }
+          .tab{
+            .btnTab{
+
+            }
+          }
+          .contentIndice{
+            .paragrafyTermos{
+              left: 40px;
+              font-size: 14px;
+              bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

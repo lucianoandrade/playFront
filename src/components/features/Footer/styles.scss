@@ -1,0 +1,195 @@
+@import '../../../styles/base.scss';
+
+.footer {
+    height: 290px;
+    width: 100%;
+    background-color: $Black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: $regular;
+    padding: 15px 0;
+    bottom: 0;
+
+    .copy {
+        color: $White;
+        bottom: 0;
+        margin: 80px auto 20px;
+        font-size: 14px;
+    }
+
+    .logo-footer{
+        margin: auto 20px;
+        width: 330px;
+        height: 158px;
+        padding: 0 10px;
+    }
+
+    .list-footer{
+        display: flex;
+ 
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            color: $White;
+        }
+
+        p {
+            color: $Black;
+        }
+    
+        li {
+            margin: 10px 30px;
+            cursor: pointer;
+
+            a {
+                text-decoration: none;
+                color: $White;
+                font-size: 16px;
+            }
+
+            .linkStyle {
+                margin: 0;
+                text-decoration: none;
+                color: $White;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px){
+    .logo-footer{
+        max-width: 290px;
+        max-height: 110px;
+        margin: 0 5px 0 15px;
+    } 
+    .list-footer li{
+        font-size: 0.8em;
+        margin: 10px 20px;
+    }  
+    .footer .copy{
+        font-size: 0.8em;
+        margin: 40px auto 20px;
+    }
+}
+
+@media screen and (max-width: 769px){
+    .footer{
+        min-height: 600px;
+        padding: 0;
+        .list-footer{
+            flex-direction: column;
+            margin: 0;
+            
+            ul{
+                margin: 0;
+                padding: 0;
+                align-items: center;
+            }
+            ul:last-child{
+                margin-top: 0;
+            }
+            li{
+                text-align: center;
+                margin: 0;
+                padding: 15px;
+            }
+        }
+
+        .logo-footer{
+            max-width: 290px;
+            max-height: 110px;
+            margin: 10px 0 0;
+        }
+    }
+}
+
+@media screen and (max-width: 330px){
+    .footer{
+        .list-footer { 
+            margin-bottom: 15px;
+        }
+        .logo-footer {
+            margin: 10px 0;
+            max-width: 290px;
+            max-height: 110px;
+        } 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
